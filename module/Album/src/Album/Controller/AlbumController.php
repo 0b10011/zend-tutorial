@@ -54,6 +54,8 @@ namespace Album\Controller;
              $album = $this->getAlbumTable()->getAlbum($id);
          }
          catch (\Exception $ex) {
+					 $this->getResponse()->setStatusCode(404);
+					 return array();
              return $this->redirect()->toRoute('album', array(
                  'action' => 'index'
              ));
