@@ -29,10 +29,14 @@ body {
 	max-width:980px;
 	margin:18px auto;
 	font-size:12px;
-	outline:1px solid red;
 }
-.primary-nav-account {
-	display:inline;
+/* Clear floated logo/menu */
+.primary-header:after {
+	content:"\00a0";
+	display:block;
+	overflow:hidden;
+	height:0;
+	clear:both;
 }
 .primary-nav-account > p {
 	text-align:right;
@@ -43,28 +47,30 @@ body {
 	vertical-align:bottom;
 }
 .primary-logo {
-	display:inline-block;
-	vertical-align:top;
 	margin-top:-10px;
+	float:left;
 }
 .primary-logo > img {
 	vertical-align:bottom;
 }
 .primary-logo-name {
-	display:inline;
-	vertical-align:baseline;
+	float:left;
+	margin-left:18px;
 }
 .primary-nav {
-	display:inline;
+	position:relative;
+	margin-left:205px; /* Logo widths (45px + 159px) - item margin (35px) + (2 x 18px) */
 }
 .primary-nav > ul {
-	display:inline;
-	margin:0;
+	margin:-1em 0 0 0;
 	padding:0;
-	text-align:right;
+	position:absolute;
+	top:38px; /* Logo name height (41px) - 3px to make up for spacing above characters */
+	right:0;
+	line-height:2;
 }
 .primary-nav > ul > li {
-	display:inline;
+	display:inline-block;
 	list-style-type:none;
 	margin:0 0 0 35px;
 	padding:0;
