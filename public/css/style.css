@@ -135,3 +135,98 @@ a:active {
 .primary-main a:visited {
 	color:#80c;
 }
+
+
+
+.snippet-wrapper {
+	background:#fff;
+	margin:18px 0;
+	border:1px solid #d6d6d6;
+	overflow:hidden;
+}
+.snippet {
+	border-spacing:18px;
+	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	
+	display:table;
+	table-layout:fixed;
+	width:100%;
+	
+	position:relative;
+}
+.snippet > aside {
+	display:table-cell;
+	vertical-align:top;
+	width:250px;
+}
+.snippet > aside > a > img {
+	vertical-align:bottom;
+}
+.snippet > aside > .social-share > a {
+	display:block;
+	float:left;
+	margin:12px 12px 0 0;
+}
+.snippet > aside > .social-share > a > img {
+	vertical-align:bottom;
+}
+.snippet > main {
+	display:table-cell;
+	vertical-align:top;
+}
+.snippet header {
+	line-height:2;
+}
+.snippet .tags {
+	position:absolute;
+	right:0;
+	top:0;
+	margin:0;
+	padding:18px 18px 0 18px;
+	list-style-type:none;
+	text-align:right;
+}
+.snippet .tags:hover {
+	bottom:0;
+	background:#333;
+	color:#fff;
+	box-shadow:-500px 0 0 500px rgba(255, 255, 255, .8);
+}
+.snippet .tags li + li {
+	display:none;
+}
+.snippet .tags:hover li + li {
+	display:block;
+}
+.snippet .tags a {
+	display:block;
+	margin:0 -18px;
+	padding:0 18px;
+	color:#555;
+}
+.snippet .tags:hover a {
+	color:#fff;
+}
+.snippet .tags a:hover,
+.snippet .tags a:focus,
+.snippet .tags a:active {
+	background:#689804;
+	opacity:1;
+}
+.snippet .post-type {
+	margin:0;
+	border-bottom-width:4px;
+	border-bottom-style:solid;
+}
+.snippet.book-review .post-type {
+	border-color:#a2c521;
+}
+.snippet.book-review p a {
+	color:#a2c521;
+}
+.snippet.book-review .tags:hover {
+	background-color:#a2c521;
+}

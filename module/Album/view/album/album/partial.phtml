@@ -1,10 +1,11 @@
 <?php
-$this->image = 'http://placehold.it/250x100/';
+$this->image = 'http://placehold.it/250x140/';
 $this->url = 'https://www.forewordreviews.com/reviews/lord-of-misrule/';
 $this->type = 'Book Review';
+$this->type_slug = 'book-review';
 $this->author = $this->artist;
 $this->snippet = 'If you love to read great books, here are 10 reasons why you\'ll love reading indie books.';
-$this->tags = array();$foo = array(
+$this->tags = array(
 	'#philosophy',
 	'#selfhelp',
 	'#bookreviews',
@@ -13,7 +14,8 @@ $this->tags = array();$foo = array(
 	'#future',
 );
 ?>
-<article class="snippet">
+<div class="snippet-wrapper">
+<article class="snippet <?= $this->escapeHtmlAttr($this->type_slug); ?>">
 	<aside>
 		<a href="<?= $this->escapeHtmlAttr($this->url); ?>"><img src="<?= $this->escapeHtmlAttr($this->image); ?>"></a>
 		<?= $this->partial('/album/album/social-share.phtml', array(
@@ -33,3 +35,4 @@ $this->tags = array();$foo = array(
 		<p><?= $this->escapeHtml($this->snippet); ?> <a href="<?= $this->escapeHtmlAttr($this->url); ?>">Read More</a></p>
 	</main>
 </article>
+</div>
