@@ -28,23 +28,37 @@ body {
 	position:relative; /* Correctly position account links */
 	max-width:980px;
 	margin:18px auto;
+	font-size:12px;
+	outline:1px solid red;
+}
+.primary-nav-account {
+	display:inline;
+}
+.primary-nav-account > p {
+	text-align:right;
+	margin:0;
+	padding:0;
+}
+.primary-nav-account > p > a > img {
+	vertical-align:bottom;
 }
 .primary-logo {
+	display:inline-block;
+	vertical-align:top;
+	margin-top:-10px;
+}
+.primary-logo > img {
+	vertical-align:bottom;
+}
+.primary-logo-name {
 	display:inline;
+	vertical-align:baseline;
 }
 .primary-nav {
 	display:inline;
 }
-.primary-nav > p {
-	position:absolute;
-	top:0;
-	right:0;
-	display:inline;
-	margin:0;
-	padding:0;
-}
 .primary-nav > ul {
-	display:inline-block;
+	display:inline;
 	margin:0;
 	padding:0;
 	text-align:right;
@@ -52,7 +66,7 @@ body {
 .primary-nav > ul > li {
 	display:inline;
 	list-style-type:none;
-	margin:0;
+	margin:0 0 0 35px;
 	padding:0;
 }
 
