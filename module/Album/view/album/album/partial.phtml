@@ -14,16 +14,22 @@ $this->tags = array();$foo = array(
 );
 ?>
 <article class="snippet">
-	<img src="<?= $this->escapeHtmlAttr($this->image); ?>">
-	<?= $this->partial('/album/album/social-share.phtml', array(
-		'url' => $this->url,
-		'title' => $this->title,
-		'snippet' => $this->snippet,
-		'image' => $this->image,
-		)); ?>
-	<?= $this->partial('/album/album/tags.phtml', array('tags' => $this->tags)); ?>
-	<p class="post-type"><?= $this->escapeHtml($this->type); ?></p>
-	<h1><?= $this->escapeHtml($this->title); ?></h1>
-	<p>by <?= $this->escapeHtml($this->author); ?></p>
-	<p><?= $this->escapeHtml($this->snippet); ?> <a href="<?= $this->escapeHtmlAttr($this->url); ?>">Read More</a></p>
+	<aside>
+		<a href="<?= $this->escapeHtmlAttr($this->url); ?>"><img src="<?= $this->escapeHtmlAttr($this->image); ?>"></a>
+		<?= $this->partial('/album/album/social-share.phtml', array(
+			'url' => $this->url,
+			'title' => $this->title,
+			'snippet' => $this->snippet,
+			'image' => $this->image,
+			)); ?>
+	</aside>
+	<main>
+		<header>
+			<?= $this->partial('/album/album/tags.phtml', array('tags' => $this->tags)); ?>
+			<p class="post-type"><?= $this->escapeHtml($this->type); ?></p>
+			<h1><a href="<?= $this->escapeHtmlAttr($this->url); ?>"><?= $this->escapeHtml($this->title); ?></a></h1>
+			<p>by <?= $this->escapeHtml($this->author); ?></p>
+		</header>
+		<p><?= $this->escapeHtml($this->snippet); ?> <a href="<?= $this->escapeHtmlAttr($this->url); ?>">Read More</a></p>
+	</main>
 </article>

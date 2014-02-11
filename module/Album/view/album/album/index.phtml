@@ -1,20 +1,6 @@
 <?php
-
- $title = 'My albums';
- $this->headTitle($title);
- ?>
- <h1><?php echo $this->escapeHtml($title); ?></h1>
- <p>
-     <a href="<?php echo $this->url('album', array('action'=>'add'));?>">Add new album</a>
- </p>
-
- <table class="table">
- <tr>
-     <th>Title</th>
-     <th>Artist</th>
-     <th>&nbsp;</th>
- </tr>
- <?php foreach ($albums as $album) : ?>
+$this->headTitle("Foreword Reviews");
+?>
+<?php foreach ($albums as $album) : ?>
 	<?= $this->partial('/album/album/partial.phtml', $album); ?>
- <?php endforeach; ?>
- </table>
+<?php endforeach; ?>

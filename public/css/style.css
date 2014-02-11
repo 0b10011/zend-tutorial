@@ -1,37 +1,97 @@
+html{
+	margin:0;
+	padding:0;
+}
 body {
-    padding-top: 60px;
-    padding-bottom: 40px;
+	margin:0;
+	padding:0;
+	background:#cde;
+	font-family:sans-serif;
+	color:#444;
+	line-height:1.5;
 }
 
-.zf-green {
-    color: #68b604;
+.primary-header-wrapper {
+	background:#fff;
+	overflow:auto;
+}
+.primary-header {
+	position:relative; /* Correctly position account links */
+	max-width:780px;
+	margin:15px auto;
+}
+.primary-logo {
+	display:inline;
+}
+.primary-nav {
+	display:inline;
+}
+.primary-nav > p {
+	position:absolute;
+	top:0;
+	right:0;
+	display:inline;
+	margin:0;
+	padding:0;
+}
+.primary-nav > ul {
+	display:inline-block;
+	margin:0;
+	padding:0;
+	text-align:right;
+}
+.primary-nav > ul > li {
+	display:inline;
+	list-style-type:none;
+	margin:0;
+	padding:0;
 }
 
-.btn-success {
-  background-color: #57a900;
-  background-image: -moz-linear-gradient(top, #70d900, #57a900);
-  background-image: -ms-linear-gradient(top, #70d900, #57a900);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
-  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
-  background-image: -o-linear-gradient(top, #70d900, #57a900);
-  background-image: linear-gradient(top, #70d900, #57a900);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+.primary-main {
+	max-width:780px;
+	margin:15px auto;
 }
 
-.btn-success:hover,
-.btn-success:active,
-.btn-success.active,
-.btn-success.disabled,
-.btn-success[disabled] {
-  background-color: #57a900;
+.primary-footer-wrapper {
+	background:#fff;
+	overflow:auto;
+}
+.primary-footer {
+	max-width:780px;
+	margin:15px auto;
+	text-align:center;
+	font-weight:bold;
+}
+.primary-footer > p {
+	margin-top:0;
+	margin-bottom:0;
+}
+.primary-footer-nav {
+	margin-left:-15px;
+	margin-right:-15px;
+}
+.primary-footer-nav > a {
+	margin:0 15px;
 }
 
-.btn-success:active, .btn-success.active {
-  background-color: #57a900;
+
+a:link,
+a:visited {
+	color:inherit;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:focus,
+a:hover,
+a:active {
+	opacity:.8;
 }
 
-div.container a.brand {
-    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
-    margin-left: 0;
-    padding: 8px 20px 12px 40px;
+.primary-main a:link {
+	font-weight:bold;
+	text-decoration:none;
+	color:#08c;
+}
+.primary-main a:visited {
+	color:#80c;
 }
