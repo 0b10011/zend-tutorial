@@ -1,9 +1,29 @@
+<?php
+$this->image = 'http://placehold.it/250x100/';
+$this->url = 'https://www.forewordreviews.com/reviews/lord-of-misrule/';
+$this->type = 'Book Review';
+$this->author = $this->artist;
+$this->snippet = 'If you love to read great books, here are 10 reasons why you\'ll love reading indie books.';
+$this->tags = array();$foo = array(
+	'#philosophy',
+	'#selfhelp',
+	'#bookreviews',
+	'#life',
+	'#ideas',
+	'#future',
+);
+?>
 <article class="snippet">
-	<img src="<?= $this->escapeUrl($this->image); ?>">
-	<?= $this->partial('/album/album/social-share.phtml', array('url' => $this->url)); ?>
-	<?= $this->partial('/album/album/tags.phtml'); ?>
+	<img src="<?= $this->escapeHtmlAttr($this->image); ?>">
+	<?= $this->partial('/album/album/social-share.phtml', array(
+		'url' => $this->url,
+		'title' => $this->title,
+		'snippet' => $this->snippet,
+		'image' => $this->image,
+		)); ?>
+	<?= $this->partial('/album/album/tags.phtml', array('tags' => $this->tags)); ?>
 	<p class="post-type"><?= $this->escapeHtml($this->type); ?></p>
 	<h1><?= $this->escapeHtml($this->title); ?></h1>
-	<p>by <?= $this->escapeHtml($this->artist); ?></p>
-	<p><?= $this->escapeHtml($this->snippet); ?> <a href="<?= $this->escapeUrl($this->url); ?>">Read More</a></p>
+	<p>by <?= $this->escapeHtml($this->author); ?></p>
+	<p><?= $this->escapeHtml($this->snippet); ?> <a href="<?= $this->escapeHtmlAttr($this->url); ?>">Read More</a></p>
 </article>

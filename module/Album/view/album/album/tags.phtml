@@ -1,3 +1,5 @@
 <ul>
-	<li>Tag 1</li>
+	<?php foreach($this->tags as $tag): ?>
+	<li><?= $tag; ?></li>
+	<?php endforeach; ?>
 </ul>
