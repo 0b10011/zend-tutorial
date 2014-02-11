@@ -14,8 +14,15 @@ body {
 
 .primary-header-wrapper {
 	background:#fff;
-	overflow:auto;
 	padding:0 18px;
+}
+/* Uncollapse margins */
+.primary-header-wrapper:before,
+.primary-header-wrapper:after {
+	content:"\00a0";
+	display:block;
+	overflow:hidden;
+	height:0;
 }
 .primary-header {
 	position:relative; /* Correctly position account links */
@@ -57,8 +64,15 @@ body {
 
 .primary-footer-wrapper {
 	background:#fff;
-	overflow:auto;
 	padding:0 18px;
+}
+/* Uncollapse margins */
+.primary-footer-wrapper:before,
+.primary-footer-wrapper:after {
+	content:"\00a0";
+	display:block;
+	overflow:hidden;
+	height:0;
 }
 .primary-footer {
 	max-width:980px;
