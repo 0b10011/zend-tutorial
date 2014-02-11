@@ -59,15 +59,17 @@ body {
 }
 .primary-nav {
 	position:relative;
-	margin-left:205px; /* Logo widths (45px + 159px) - item margin (35px) + (2 x 18px) */
+	top:38px; /* Position top just below logo name - Logo name height (41px) - 3px */
+	margin-top:-1em; /* Move up 1 character to line up bottom with bottom of logo name */
+	padding-bottom:1em; /* Make up for the -1em top margin */
+	margin-bottom:18px; /* Make sure 18px margin is still applied below last line */
+	margin-left:205px; /* Wrapping: Logo widths (45px + 159px) - item margin (35px) + (2 x 18px) */
+	text-align:right;
+	line-height:2;
 }
 .primary-nav > ul {
-	margin:-1em 0 0 0;
+	margin:0;
 	padding:0;
-	position:absolute;
-	top:38px; /* Logo name height (41px) - 3px to make up for spacing above characters */
-	right:0;
-	line-height:2;
 }
 .primary-nav > ul > li {
 	display:inline-block;
