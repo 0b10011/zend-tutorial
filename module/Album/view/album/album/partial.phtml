@@ -28,13 +28,13 @@ $this->tags = array(
 			)); ?>
 	</aside>
 	<main>
-		<header>
+		<header class="snippet-header">
 			<?= $this->partial('/album/album/tags.phtml', array('tags' => $this->tags)); ?>
-			<p class="post-type"><a href="<?= $this->escapeHtmlAttr($this->type_url) ?>"><?= $this->escapeHtml($this->type); ?></a></p>
-			<h1><a href="<?= $this->escapeHtmlAttr($this->url); ?>"><?= $this->escapeHtml($this->title); ?></a></h1>
-			<p>by <a href="<?= $this->escapeHtmlAttr($this->author_url); ?>"><?= $this->escapeHtml($this->author); ?></a></p>
+			<p class="snippet-type"><a href="<?= $this->escapeHtmlAttr($this->type_url) ?>"><?= $this->escapeHtml($this->type); ?></a></p>
+			<h1 class="snippet-title"><a href="<?= $this->escapeHtmlAttr($this->url); ?>"><?= $this->escapeHtml($this->title); ?></a></h1>
+			<p class="snippet-by">by <a href="<?= $this->escapeHtmlAttr($this->author_url); ?>"><?= $this->escapeHtml($this->author); ?></a></p>
 		</header>
-		<p><?= $this->escapeHtml($this->snippet); ?> <a href="<?= $this->escapeHtmlAttr($this->url); ?>">Read More</a></p>
+		<p class="snippet-snippet"><?= $this->escapeHtml($this->snippet); ?> <a href="<?= $this->escapeHtmlAttr($this->url); ?>">Read More</a></p>
 	</main>
 </article>
 </div>

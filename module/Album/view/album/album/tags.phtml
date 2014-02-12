@@ -1,5 +1,5 @@
 <ul class="tags">
 	<?php foreach($this->tags as $tag): ?>
-	<li><a href="/search/?q=<?= $this->escapeUrl($tag); ?>" title="See all content tagged <?= $this->escapeHtmlAttr($tag); ?>"><?= $this->escapeHtml($tag); ?></a></li>
+	<li><a href="/search/?q=<?= $this->escapeUrl($tag); ?>" title="See all content tagged <?= $this->escapeHtmlAttr($tag); ?>" class="tag"><?= $this->escapeHtml($tag); ?></a></li>
 	<?php endforeach; ?>
 </ul>

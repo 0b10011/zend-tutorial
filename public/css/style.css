@@ -174,10 +174,10 @@ a:visited {
 	display:table-cell;
 	vertical-align:top;
 }
-.snippet header {
+.snippet-header {
 	line-height:1.5;
 }
-.snippet .tags {
+.snippet-header .tags {
 	position:absolute;
 	right:0;
 	top:0;
@@ -187,67 +187,66 @@ a:visited {
 	text-align:right;
 	line-height:2;
 }
-.snippet .tags:hover {
+.snippet-header .tags:hover {
 	bottom:0;
 	background:#666;
 	color:#fff;
 	box-shadow:-500px 0 0 500px rgba(255, 255, 255, .8);
 }
-.snippet .tags li + li {
+.snippet-header .tags li + li {
 	display:none;
 }
-.snippet .tags:hover li + li {
+.snippet-header .tags:hover li + li {
 	display:block;
 }
-.snippet .tags a {
+.snippet-header .tags a {
 	display:block;
 	margin:0 -18px;
 	padding:0 18px;
 	color:#666;
 	font-weight:normal;
 }
-.snippet .tags:hover a {
+.snippet-header .tags:hover a.tag {
 	color:#fff;
 }
-.snippet .tags a:hover,
-.snippet .tags a:focus,
-.snippet .tags a:active {
+.snippet-header a.tag:hover {
 	background:#689804;
 	opacity:1;
 }
-.snippet .post-type {
+.snippet-header .snippet-type {
 	margin:0;
 	border-bottom-width:4px;
 	border-bottom-style:solid;
 	line-height:2;
 }
-.snippet > main > header > h1 {
+.snippet-title {
 	margin:0;
 	padding:0;
 	font-size:20px;
 	line-height:2;
 }
-.snippet > main > header > p {
+.snippet-by {
 	margin:0;
 	padding:0;
 	color:#666;
 }
-.snippet > main > header > p > a {
+.snippet-by > a {
 	font-weight:normal;
 }
-.snippet .post-type > a {
+.snippet-type > a {
 	color:#666;
 	font-weight:bold;
 }
-.snippet.book-review .post-type {
-	border-color:#a2c521;
-}
-.snippet > main > p {
+.snippet-snippet {
 	margin:0;
 	padding:0;
 	color:#666;
 }
-.snippet.book-review > main > p > a {
+
+.snippet.book-review .snippet-type {
+	border-color:#a2c521;
+}
+.snippet.book-review .snippet-snippet a {
 	color:#a2c521;
 }
 .snippet.book-review .tags:hover {
