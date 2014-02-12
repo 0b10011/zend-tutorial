@@ -2,8 +2,10 @@
 $this->image = 'http://placehold.it/250x140/';
 $this->url = 'https://www.forewordreviews.com/reviews/lord-of-misrule/';
 $this->type = 'Book Review';
+$this->type_url = 'https://www.forewordreviews.com/reviews/';
 $this->type_slug = 'book-review';
 $this->author = $this->artist;
+$this->author_url = 'https://www.forewordreviews.com/reviews/reviewers/john-doe/';
 $this->snippet = 'If you love to read great books, here are 10 reasons why you\'ll love reading indie books.';
 $this->tags = array(
 	'#philosophy',
@@ -28,9 +30,9 @@ $this->tags = array(
 	<main>
 		<header>
 			<?= $this->partial('/album/album/tags.phtml', array('tags' => $this->tags)); ?>
-			<p class="post-type"><?= $this->escapeHtml($this->type); ?></p>
+			<p class="post-type"><a href="<?= $this->escapeHtmlAttr($this->type_url) ?>"><?= $this->escapeHtml($this->type); ?></a></p>
 			<h1><a href="<?= $this->escapeHtmlAttr($this->url); ?>"><?= $this->escapeHtml($this->title); ?></a></h1>
-			<p>by <?= $this->escapeHtml($this->author); ?></p>
+			<p>by <a href="<?= $this->escapeHtmlAttr($this->author_url); ?>"><?= $this->escapeHtml($this->author); ?></a></p>
 		</header>
 		<p><?= $this->escapeHtml($this->snippet); ?> <a href="<?= $this->escapeHtmlAttr($this->url); ?>">Read More</a></p>
 	</main>

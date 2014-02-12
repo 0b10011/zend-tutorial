@@ -130,20 +130,6 @@ a:visited {
 	font-weight:bold;
 	text-decoration:none;
 }
-a:focus,
-a:hover,
-a:active {
-	opacity:.8;
-}
-
-.primary-main a:link {
-	font-weight:bold;
-	text-decoration:none;
-	color:#08c;
-}
-.primary-main a:visited {
-	color:#80c;
-}
 
 
 
@@ -165,6 +151,8 @@ a:active {
 	width:100%;
 	
 	position:relative;
+	
+	font-size:14px;
 }
 .snippet > aside {
 	display:table-cell;
@@ -187,7 +175,7 @@ a:active {
 	vertical-align:top;
 }
 .snippet header {
-	line-height:2;
+	line-height:1.5;
 }
 .snippet .tags {
 	position:absolute;
@@ -197,10 +185,11 @@ a:active {
 	padding:18px 18px 0 18px;
 	list-style-type:none;
 	text-align:right;
+	line-height:2;
 }
 .snippet .tags:hover {
 	bottom:0;
-	background:#333;
+	background:#666;
 	color:#fff;
 	box-shadow:-500px 0 0 500px rgba(255, 255, 255, .8);
 }
@@ -214,7 +203,8 @@ a:active {
 	display:block;
 	margin:0 -18px;
 	padding:0 18px;
-	color:#555;
+	color:#666;
+	font-weight:normal;
 }
 .snippet .tags:hover a {
 	color:#fff;
@@ -229,11 +219,35 @@ a:active {
 	margin:0;
 	border-bottom-width:4px;
 	border-bottom-style:solid;
+	line-height:2;
+}
+.snippet > main > header > h1 {
+	margin:0;
+	padding:0;
+	font-size:20px;
+	line-height:2;
+}
+.snippet > main > header > p {
+	margin:0;
+	padding:0;
+	color:#666;
+}
+.snippet > main > header > p > a {
+	font-weight:normal;
+}
+.snippet .post-type > a {
+	color:#666;
+	font-weight:bold;
 }
 .snippet.book-review .post-type {
 	border-color:#a2c521;
 }
-.snippet.book-review p a {
+.snippet > main > p {
+	margin:0;
+	padding:0;
+	color:#666;
+}
+.snippet.book-review > main > p > a {
 	color:#a2c521;
 }
 .snippet.book-review .tags:hover {
