@@ -133,10 +133,28 @@ a:visited {
 
 
 
-.snippet-wrapper {
+.snippet-wrapper-outer {
 	background:#fff;
 	margin:18px 0;
 	border:1px solid #d6d6d6;
+	position:relative;
+}
+.snippet-wrapper-outer:after {
+	content:"\00a0";
+	position:absolute;
+	top:100%;
+	left:18px;
+	background:#fff;
+	width:8px;
+	height:8px;
+	overflow:hidden;
+	transform-origin:1px 1px;
+	transform:skewY(-45deg);
+	border-left:1px solid #d6d6d6;
+	border-bottom:1px solid #d6d6d6;
+}
+/* Prevent box-shadow overlay from .tags from breaking out over border */
+.snippet-wrapper {
 	overflow:hidden;
 }
 .snippet {

@@ -16,6 +16,7 @@ $this->tags = array(
 	'#future',
 );
 ?>
+<div class="snippet-wrapper-outer">
 <div class="snippet-wrapper">
 <article class="snippet <?= $this->escapeHtmlAttr($this->type_slug); ?>">
 	<aside>
@@ -37,4 +38,5 @@ $this->tags = array(
 		<p class="snippet-snippet"><?= $this->escapeHtml($this->snippet); ?> <a href="<?= $this->escapeHtmlAttr($this->url); ?>">Read More</a></p>
 	</main>
 </article>
+</div>
 </div>
