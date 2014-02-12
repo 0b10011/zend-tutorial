@@ -1,6 +1,35 @@
 <?php
 $this->headTitle("Foreword Reviews");
+$ads = array(
+	5234 => array(
+		'type' => 'image',
+		'alt' => 'Some awesome advertisement that you should click on',
+		'unique' => 'acdf4391f',
+		'width' => 300,
+		'height' => 300,
+	),
+	213 => array(
+		'type' => 'iframe',
+		'width' => 200,
+		'height' => 250,
+	),
+)
 ?>
-<?php foreach ($albums as $album) : ?>
-	<?= $this->partial('/album/album/partial.phtml', $album); ?>
-<?php endforeach; ?>
+<div class="layout-two-column">
+	<main>
+	<?php foreach ($albums as $album) : ?>
+		<?= $this->partial('/album/album/partial.phtml', $album); ?>
+	<?php endforeach; ?>
+	</main>
+	<aside>
+	<?php foreach ($ads as $ad => $info) : ?>
+		<div class="sidebar-widget">
+			<?php if($info['type'] === 'image'){ ?>
+			<a href="/ads/<?= $ad ?>/<?= $info['unique'] ?>/"><img src="/ads/<?= $ad ?>/" alt="<?= $info['alt'] ?>" width="<?= $info['width'] ?>" height="<?= $info['height'] ?>"></a>
+			<?php } else { ?>
+			<iframe src="/ads/<?= $ad ?>/" sandbox="allow-top-navigation" width="<?= $info['width'] ?>" height="<?= $info['height'] ?>"></iframe>
+			<?php } ?>
+		</div>
+	<?php endforeach; ?>
+	</aside>
+</div>

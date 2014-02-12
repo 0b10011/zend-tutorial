@@ -252,3 +252,41 @@ a:visited {
 .snippet.book-review .tags:hover {
 	background-color:#a2c521;
 }
+
+
+.layout-two-column {
+	display:table;
+	table-layout:fixed;
+	border-spacing:18px 0;
+	min-width:100%;
+	margin:-18px;
+}
+.layout-two-column > main {
+	display:table-cell;
+	vertical-align:top;
+}
+.layout-two-column > aside {
+	display:table-cell;
+	vertical-align:top;
+	width:304px;
+}
+
+
+.sidebar-widget {
+	border:1px solid #d6d6d6;
+	padding:1px;
+	background:#fff;
+	margin:18px 0;
+	max-width:300px;
+	overflow:hidden;
+	text-align:center;
+}
+.sidebar-widget > iframe {
+	max-width:100%;
+	border:0;
+}
+.sidebar-widget > img {
+	vertical-align:bottom;
+	max-width:100%;
+	border:0;
+}
